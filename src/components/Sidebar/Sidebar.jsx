@@ -1,7 +1,7 @@
-import React, { useContext, useState } from 'react'
+import { useContext, useState } from 'react'
 import "./Sidebar.css"
 import {assets} from "../../assets/assets/assets"
-import { Context } from '../../context/Context'
+import { Context } from '../../utils/context/Context'
 
 const Sidebar = () => {
 
@@ -28,7 +28,7 @@ const Sidebar = () => {
         <p className='recent-title'>Recent</p>
         {previousPrompt.map((item,index)=>{
           return(
-            <div onClick={()=>loadPrompt(item)} className="recent-entry">
+            <div onClick={()=>loadPrompt(item)}  key={index}className="recent-entry">
                <img src={assets.message_icon} alt="" />
               <p>{item.slice(0,18)} ....</p>
            </div>

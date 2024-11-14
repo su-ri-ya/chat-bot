@@ -1,5 +1,6 @@
+/* eslint-disable react/prop-types */
 import { createContext, useState } from 'react';
-import run from '../config/gemini'
+import run from '../../config/gemini'
 
 export const Context = createContext();
 const ContextProvider = (props) =>{
@@ -75,8 +76,6 @@ const ContextProvider = (props) =>{
         input,
         setinput,
         newChat
-
-
     }
     return (
         <Context.Provider value={contextValue}>

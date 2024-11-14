@@ -11,7 +11,7 @@
 import {GoogleGenerativeAI,HarmCategory,HarmBlockThreshold,} from "@google/generative-ai";
 
   
-  const apiKey = "AIzaSyC4Fjk2ATV3Cekt_TSx_XYgh_a2ds_zM4E";
+  const apiKey = "AIzaSyAp5HIpQQzNVl_Nw4DwfgPwo9_Xy8QzuFM";
   
   
   
@@ -26,7 +26,7 @@ import {GoogleGenerativeAI,HarmCategory,HarmBlockThreshold,} from "@google/gener
   
   async function run(prompt) {
     const genAI = new GoogleGenerativeAI(apiKey);
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash",});
+    const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro",});
     const chatSession = model.startChat({
       
         generationConfig,
